@@ -14,7 +14,7 @@ pipeline{
 
                     gitCheckout(
                         branch: "master",
-                        url: "https://github.com/skull-Atul/simple-java-maven-app.git"
+                        url: "https://github.com/skull-Atul/java.git"
                     )
                 }
             }
