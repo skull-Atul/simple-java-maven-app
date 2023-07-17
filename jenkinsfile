@@ -1,0 +1,33 @@
+@Library('shared-lib') _
+
+pipeline{
+
+    agent any
+
+    stages{
+
+        stage('Git Checkout'){
+
+            steps{
+
+                script{
+
+                    gitCheckout(
+                        branch: "master",
+                        url: "https://github.com/skull-Atul/simple-java-maven-app.git"
+                    )
+                }
+            }
+        }
+        stage ('Unit Test maven'){
+
+            steps{
+
+                script{
+
+                    mvnTest()
+                }
+            }
+        }
+    }
+}
